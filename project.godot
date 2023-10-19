@@ -11,5 +11,21 @@ config_version=5
 [application]
 
 config/name="CODENAME-GALIH"
+run/main_scene="res://Scenes/Splash Screen/splash.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/resizable=false
+
+[internationalization]
+
+locale/translation_remaps={}
+locale/translations=PackedStringArray("res://Res/Translation.en.translation", "res://Res/Translation.id.translation", "res://Res/Translation.jp.translation")
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

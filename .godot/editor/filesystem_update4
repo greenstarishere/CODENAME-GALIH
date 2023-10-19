@@ -1,1 +1,4 @@
-res://Main.tscn
+res://Scenes/Splash Screen/splash.tscn
+res://Res/Theme/FlatUI/kenneyUI-blue.tres
+res://Res/Theme/FlatUI/kenneyUI-red.tres
+res://Res/Theme/FlatUI/kenneyUI-yellow.tres

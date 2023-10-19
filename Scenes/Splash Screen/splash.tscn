@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://cm5otc4px61au"]
+
+[ext_resource type="Script" path="res://Scripts/splashScreen.gd" id="1_40xuy"]
+[ext_resource type="VideoStream" path="res://Res/Splash Screen/Splash1.ogv" id="1_lf8wa"]
+[ext_resource type="VideoStream" path="res://Res/Splash Screen/splashTemp.ogv" id="2_hcw8c"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_40xuy")
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+ratio = 1.7778
+
+[node name="splash_2" type="VideoStreamPlayer" parent="AspectRatioContainer"]
+layout_mode = 2
+stream = ExtResource("2_hcw8c")
+expand = true
+
+[node name="splash_1" type="VideoStreamPlayer" parent="AspectRatioContainer"]
+layout_mode = 2
+stream = ExtResource("1_lf8wa")
+autoplay = true
+expand = true
+
+[node name="Button" type="Button" parent="AspectRatioContainer"]
+layout_mode = 2
+flat = true
+
+[connection signal="finished" from="AspectRatioContainer/splash_2" to="." method="_on_splash_2_finished"]
+[connection signal="finished" from="AspectRatioContainer/splash_1" to="." method="_on_splash_1_finished"]
+[connection signal="button_down" from="AspectRatioContainer/Button" to="." method="_on_button_button_down"]
